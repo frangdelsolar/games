@@ -1,7 +1,13 @@
 package main
 
-import "fmt"
+import (
+	s "github.com/frangdelsolar/games/snake"
+)
+
+var log *s.Logger
 
 func main() {
-	fmt.Println("Hello, World!")
+	log = s.NewLogger("debug")
+
+	log.Info().Msg("Initializing Snake!")
 }
