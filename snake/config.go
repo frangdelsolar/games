@@ -11,8 +11,11 @@ var appConfig *AppConfig
 
 type AppConfig struct {
 	LogLevel string `yaml:"log_level"`
-	Rows     int    `yaml:"rows"`
-	Cols     int    `yaml:"cols"`
+
+	Board struct {
+		Rows int `yaml:"rows"`
+		Cols int `yaml:"cols"`
+	} `yaml:"board"`
 }
 
 func LoadConfig(filePath string) (*AppConfig, error) {

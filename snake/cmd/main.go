@@ -16,4 +16,7 @@ func main() {
 	log = s.NewLogger(config.LogLevel)
 
 	log.Info().Interface("config", config).Msg("Initializing Snake with config")
+
+	board := s.NewBoard(config)
+	log.Debug().Interface("board", board).Msg("Created new board")
 }
