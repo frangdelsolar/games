@@ -7,7 +7,13 @@ import (
 var log *s.Logger
 
 func main() {
-	log = s.NewLogger("debug")
 
-	log.Info().Msg("Initializing Snake!")
+	config, err := s.LoadConfig("config.yaml")
+	if err != nil {
+		panic(err)
+	}
+
+	log = s.NewLogger(config.LogLevel)
+
+	log.Info().Interface("config", config).Msg("Initializing Snake with config")
 }

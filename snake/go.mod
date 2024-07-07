@@ -2,7 +2,10 @@ module github.com/frangdelsolar/games/snake
 
 go 1.22.4
 
-require github.com/rs/zerolog v1.33.0
+require (
+	github.com/rs/zerolog v1.33.0
+	gopkg.in/yaml.v2 v2.4.0
+)
 
 require (
 	github.com/mattn/go-colorable v0.1.13 // indirect
