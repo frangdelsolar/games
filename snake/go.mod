@@ -1,4 +1,4 @@
-module github.com/frangdelsolar/go-games/pkg/logger
+module github.com/frangdelsolar/games/snake
 
 go 1.22.4
 
